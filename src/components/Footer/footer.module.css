@@ -1,0 +1,31 @@
+.container {
+  height: 3rem;
+  padding: 1rem;
+  color: #ef4444;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    height: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding: 5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .container {
+    padding: 10rem;
+  }
+}
