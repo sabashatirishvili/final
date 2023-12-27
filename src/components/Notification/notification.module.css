@@ -1,0 +1,18 @@
+.container {
+  height: 3rem;
+  background-color: #ef4444;
+  color: #fff;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    font-size: 1rem;
+  }
+}
