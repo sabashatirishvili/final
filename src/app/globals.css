@@ -134,3 +134,9 @@ table {
 body {
   font-family: "Inter", sans-serif;
 }
+
+
+button {
+  border: none;
+  background: none;
+}
