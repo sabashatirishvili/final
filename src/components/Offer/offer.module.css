@@ -1,0 +1,74 @@
+.container {
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.textContainer,
+.imgContainer {
+  flex: 1;
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.textContainer {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.img {
+  object-fit: contain;
+}
+
+.btn {
+  background: none;
+  border: none;
+  background-color: #ef4444;
+  border-radius: 0.375rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: bold;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url('/offerBg.png');
+    height: 70vh;
+  }
+
+  .imgContainer {
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (min-width: 1280px) {
+  .title {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .desc {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+}
