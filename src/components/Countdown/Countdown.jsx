@@ -4,10 +4,9 @@ import React, { useEffect, useState } from "react";
 import styles from "./countdown.module.css";
 
 function Countdown() {
-  let now = new Date();
-  let twoDaysFromNow = +now + 172800000;
-  let difference = +twoDaysFromNow - +now;
+  let difference = +new Date(`1/20/2024`) - +new Date();
   const [delay, setDelay] = useState(difference);
+
   const d = Math.floor(difference / (1000 * 60 * 60 * 24));
   const h = Math.floor((difference / (1000 * 60 * 60)) % 24);
   const m = Math.floor((difference / 1000 / 60) % 60);
@@ -17,15 +16,15 @@ function Countdown() {
     const timer = setInterval(() => {
       setDelay(delay - 1);
     }, 1000);
+
     if (delay === 0) {
-      return () => {
-        clearInterval(0);
-      };
+      clearInterval(timer);
     }
+
     return () => {
-      clearInterval(0);
+      clearInterval(timer);
     };
-  }, [delay]);
+  });
 
   return (
     <span className={styles.container}>
