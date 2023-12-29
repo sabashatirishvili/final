@@ -1,0 +1,121 @@
+.container {
+  height: calc(100vh - 6rem);
+  color: #ef4444;
+  display: flex;
+  flex-direction: column;
+}
+
+.items,
+.paymentContainer {
+  height: 50%;
+  padding: 1rem;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: scroll;
+}
+
+.paymentContainer {
+  background-color: #f4fdff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: bold;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.btn {
+  background-color: #ef4444;
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  width: 50%;
+  text-transform: uppercase;
+  align-self: end;
+}
+
+.singleItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.subtotal,
+.services,
+.delivery,
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deliveryPrice {
+  color: #22c55e;
+}
+
+.total {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.totalCost {
+  font-weight: bold;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    height: calc(100vh - 9rem);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .items {
+    height: 100%;
+    width: calc((100% / 3) * 2);
+    padding: 0 5rem;
+  }
+
+  .paymentContainer {
+    height: 100%;
+    width: calc(100% / 3);
+    padding: 0 5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .items, .paymentContainer {
+    padding: 0 10rem;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .paymentContainer, .items {
+    flex: 1;
+  }
+
+  .paymentContainer {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    gap: 1.5rem;
+  }
+}
