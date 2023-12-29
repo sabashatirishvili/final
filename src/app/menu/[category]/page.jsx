@@ -16,10 +16,13 @@ function CategoryPage() {
         >
           {true && (
             <div className={styles.imgContainer}>
-              <Image src="" alt="" fill />
+              <Image className={styles.img} src={`${item.img}`} alt="product_image" fill />
             </div>
           )}
           <div className={styles.textContainer}>
+            <h1 className={styles.title}>{item.title}</h1>
+            <h2 className={styles.price}>${item.price}</h2>
+            <button className={styles.btn}>Add to Cart</button>
           </div>
         </Link>
       ))}
