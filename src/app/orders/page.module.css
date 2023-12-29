@@ -1,0 +1,56 @@
+.container {
+  padding: 1rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0.75rem 0.75rem;
+}
+
+.headerRow {
+  text-align: left;
+  font-weight: bold;
+}
+
+.bodyRow {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.id,
+.products {
+  display: none;
+}
+
+.cell {
+  padding: 1.5rem 0.25rem;
+}
+
+.bodyRow:nth-child(2n + 1) {
+  background-color: #f3f4f6;
+}
+@media only screen and (min-width: 768px) {
+  .id,
+  .products {
+    display: block;
+  }
+
+  .bodyRow {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}

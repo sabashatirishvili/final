@@ -25,7 +25,7 @@ function Navbar() {
           <span>123 456 78</span>
         </div>
         <Link href="/login">Login</Link>
-        <Link href="/menu">Orders</Link>
+        <Link href="/orders">Orders</Link>
         <CartIcon/>
       </div>
 
