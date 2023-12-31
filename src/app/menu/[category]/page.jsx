@@ -10,23 +10,11 @@ function CategoryPage() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/products/")
+    fetch("https://restaurant-final-api.fly.dev/products/")
       .then((res) => res.json())
       .then((json) => setData(json));
   }, []);
 
-  const handleCartAdd = async (productId) => {
-    // Find the product in data based on the productId
-    const selectedProduct = data.find((item) => item.id === productId);
-    const item = [...data].filter(item => item.id = selectedProduct.id);
-    console.log(item);
-    const res = await fetch("http://localhost:8000/carts/1");
-    const json = await res.json();
-    console.log(json);
-
-    setCart((prevCart) => [...prevCart, selectedProduct]);
-
-  };
   return (
     <div className={styles.container}>
       {data.map((item) => (
@@ -50,7 +38,6 @@ function CategoryPage() {
             <h2 className={styles.price}>${item.price}</h2>
             <button
               className={styles.btn}
-              onClick={() => handleCartAdd(item.id)}
             >
               Add to Cart
             </button>

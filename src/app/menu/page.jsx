@@ -8,7 +8,7 @@ function Menu() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/menus/")
+    fetch("https://restaurant-final-api.fly.dev//menus/")
       .then((res) => res.json())
       .then((json) => {
         setData(json);

@@ -9,13 +9,17 @@ function Price({ price, id, options }) {
   const [selected, setSelected] = useState(0);
   useEffect(() => {
     setTotalPrice(
-      quantity * (options && options[selected] ? price + options[selected]["additional_price"] : price)
+      quantity *
+        (options && options[selected]
+          ? price + options[selected]["additional_price"]
+          : price)
     );
   }, [quantity, selected, options, price]);
 
+  console.log(options);
   return (
     <div className={styles.container}>
-      <h2 className={styles.price}>${totalPrice}</h2>
+      <h2 className={styles.price}>${totalPrice.toFixed(2)}</h2>
       <div className={styles.optionsContainer}>
         {options.map((option, index) => (
           <button

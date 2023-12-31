@@ -8,7 +8,7 @@ function Featured() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/featured_products/")
+    fetch("https://restaurant-final-api.fly.dev/featured_products/")
       .then((res) => res.json())
       .then((json) => setData(json));
   }, []);
