@@ -30,7 +30,7 @@ function SingleProduct({ params }) {
   });
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/products/${params.id}`)
+    fetch(`https://restaurant-final-api.fly.dev/products/${params.id}/`)
       .then((res) => res.json())
       .then((json) => setData(json));
   }, [params]);
@@ -38,7 +38,7 @@ function SingleProduct({ params }) {
   console.log(data);
   return (
     <div className={styles.container}>
-      {singleProduct.img && (
+      {data.img && (
         <div className={styles.imgContainer}>
           <Image
             className={styles.img}
@@ -49,7 +49,7 @@ function SingleProduct({ params }) {
         </div>
       )}
       <div className={styles.textContainer}>
-        <h1 className={styles.title}>{singleProduct.title}</h1>
+        <h1 className={styles.title}>{data.title}</h1>
         <p className={styles.desc}>{data.desc}</p>
         <Price price={data.price} id={data.id} options={data.options} />
       </div>

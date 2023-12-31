@@ -7,14 +7,14 @@ import Image from "next/image";
 
 function CategoryPage() {
   const [data, setData] = useState([]);
-  const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    fetch("https://restaurant-final-api.fly.dev/products/")
+    fetch("https://restaurant-final-api.fly.dev/products")
       .then((res) => res.json())
       .then((json) => setData(json));
   }, []);
 
+  console.log(data);
   return (
     <div className={styles.container}>
       {data.map((item) => (
