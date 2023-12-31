@@ -22,15 +22,15 @@ const data = [
 function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentSlide((prev) => (prev === data.length - 1 ? 0 : prev + 1));
-  //     if (currentSlide.id === 2) {
-  //       setCurrentSlide(0);
-  //     }
-  //   }, 2000);
-  //   return () => clearInterval(interval);
-  // }, [currentSlide]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === data.length - 1 ? 0 : prev + 1));
+      if (currentSlide.id === 2) {
+        setCurrentSlide(0);
+      }
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [currentSlide]);
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>

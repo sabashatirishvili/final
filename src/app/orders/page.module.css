@@ -1,5 +1,6 @@
 .container {
   padding: 1rem;
+  height: calc(100vh - 6rem);
 }
 
 .table {
@@ -26,9 +27,6 @@
   padding: 1.5rem 0.25rem;
 }
 
-.bodyRow:nth-child(2n + 1) {
-  background-color: #f3f4f6;
-}
 @media only screen and (min-width: 768px) {
   .id,
   .products {

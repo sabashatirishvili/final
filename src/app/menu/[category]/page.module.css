@@ -61,9 +61,6 @@
   display: none;
 }
 
-.singleItem:nth-child(2n) {
-  background-color: #f4fffd;
-}
 @media only screen and (min-width: 640px) {
   .singleItem {
     width: 50%;

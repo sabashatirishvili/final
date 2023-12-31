@@ -1,18 +1,28 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import styles from "./featured.module.css";
 import Image from "next/image";
 import { featuredProducts } from "@/data";
 function Featured() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://restaurant-final-api.fly.dev/featured_products/")
+      .then((res) => res.json())
+      .then((json) => setData(json));
+  }, []);
+  console.log(data);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        {featuredProducts.map((product) => (
+        {data.map((product) => (
           <div key={product.id} className={styles.singleItem}>
             {product.img && (
               <div className={styles.imgContainer}>
                 <Image
                   className={styles.img}
-                  src={product.img}
+                  src={`https://res.cloudinary.com/dqzdpni3j/${product.img}`}
                   alt="product"
                   fill
                 />
