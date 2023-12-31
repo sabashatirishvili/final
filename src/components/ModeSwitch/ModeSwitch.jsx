@@ -6,12 +6,12 @@ import { useContext } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
 
 function ModeSwitch() {
-  const { toggle, mode } = useContext(ThemeContext);
+  const {toggle, mode} = useContext(ThemeContext);
   return (
     <div className={styles.container} onClick={toggle}>
       <div
         className={styles.switcher}
-        style={mode === "dark" ? { left: "3px" } : { right: "3px" }}
+        style={mode === "dark" ? { right: "3px" } : { left: "3px" }}
       ></div>
     </div>
   );

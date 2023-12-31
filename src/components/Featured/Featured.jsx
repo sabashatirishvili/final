@@ -5,24 +5,24 @@ import styles from "./featured.module.css";
 import Image from "next/image";
 import { featuredProducts } from "@/data";
 function Featured() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000")
+    fetch("http://localhost:8000/featured_products/")
       .then((res) => res.json())
       .then((json) => setData(json));
-  }, [data]);
+  }, []);
   console.log(data);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        {featuredProducts.map((product) => (
+        {data.map((product) => (
           <div key={product.id} className={styles.singleItem}>
             {product.img && (
               <div className={styles.imgContainer}>
                 <Image
                   className={styles.img}
-                  src={`${product.img}`}
+                  src={`https://res.cloudinary.com/dqzdpni3j/${product.img}`}
                   alt="product"
                   fill
                 />

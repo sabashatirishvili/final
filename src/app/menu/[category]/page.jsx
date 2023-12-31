@@ -24,20 +24,8 @@ function CategoryPage() {
     const json = await res.json();
     console.log(json);
 
-    // Update the cart state
     setCart((prevCart) => [...prevCart, selectedProduct]);
 
-    // Send a PUT request to update the cart on the server
-    // await fetch("http://localhost:8000/carts/1/", {
-    //   method: "PUT",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     url: "http://localhost:8000/carts/1/",
-    //     products: [...cart, selectedProduct],
-    //   }),
-    // });
   };
   return (
     <div className={styles.container}>
