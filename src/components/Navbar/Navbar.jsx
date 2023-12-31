@@ -3,6 +3,7 @@ import Link from "next/link";
 import Menu from "../Menu/Menu";
 import CartIcon from "../CartIcon/CartIcon";
 import Image from "next/image";
+import ModeSwitch from "../ModeSwitch/ModeSwitch";
 
 function Navbar() {
   
@@ -12,6 +13,7 @@ function Navbar() {
         <Link href="/">Homepage</Link>
         <Link href="/menu">Menu</Link>
         <Link href="/">Contact</Link>
+        <ModeSwitch/>
       </div>
       <div className={styles.logo}>
         <Link href="/">Massimo</Link>

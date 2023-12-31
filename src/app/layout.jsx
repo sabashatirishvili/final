@@ -4,6 +4,7 @@ import Notification from "@/components/Notification/Notification";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
+import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata = {
   title: "Create Next App",
@@ -14,10 +15,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Notification />
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Notification />
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

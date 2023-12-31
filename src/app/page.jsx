@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import Slider from '@/components/Slider/Slider'
+import Slider from '@/Slider/Slider'
 import Featured from '@/components/Featured/Featured'
 import Offer from '@/components/Offer/Offer'
 

@@ -142,3 +142,17 @@ button {
   background: none;
   cursor: pointer;
 }
+
+.dark {
+  background-color: #292929;
+  color: #fff;
+}
+
+.light {
+  background-color: #fff;
+}
+
+.theme {
+  transition: all 300ms ease-in-out;
+  
+}

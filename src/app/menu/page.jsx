@@ -1,18 +1,29 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import { menu } from "@/data";
 import Link from "next/link";
 
 function Menu() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/menus/")
+      .then((res) => res.json())
+      .then((json) => {
+        setData(json);
+      });
+  }, []);
+
   return (
     <div className={styles.container}>
-      {menu.map((category) => (
+      {data.map((category, index) => (
         <Link
           className={styles.category}
-          key={category.id}
+          key={index}
           href={`/menu/${category.slug}`}
           style={{
-            backgroundImage: `url(${category.img})`,
+            backgroundImage: `url(https://res.cloudinary.com/dqzdpni3j/${category.img})`,
           }}
         >
           <div
